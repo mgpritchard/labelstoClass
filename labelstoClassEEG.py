@@ -29,44 +29,14 @@ def numtoClass(input_file, output_file):
             datarow=dataset[index]
             writerow=list(datarow)
             if x==0:
-                Class.append('Open') #Splay
-                writerow.append('Open')
+                Class.append('Relax')
+                writerow.append('Relax')
             elif x==1:
                 Class.append('Neutral')
                 writerow.append('Neutral')
             elif x==2:
-                Class.append('Close') #Clench
-                writerow.append('Close')
-            elif x==3:
-                Class.append('Scissors') #Peace
-                writerow.append('Scissors')
-            elif x==4:
-                Class.append('ThumbsUp')
-                writerow.append('ThumbsUp')
-            elif x==5:
-                Class.append('Paper') #FlatOpen
-                writerow.append('Paper')
-            elif x==6:
-                Class.append('IdxPoint')
-                writerow.append('IdxPoint')
-            elif x==7:
-                Class.append('FlatClose')
-                writerow.append('FlatClose')
-            elif x==8:
-                Class.append('FingerGun')
-                writerow.append('FingerGun')
-            elif x==9:
-                Class.append('waveout') #openout
-                writerow.append('waveout')
-            elif x==10:
-                Class.append('wavein') #openin
-                writerow.append('wavein')
-            elif x==11:
-                Class.append('closeout')
-                writerow.append('closeout')
-            elif x==12:
-                Class.append('closein')
-                writerow.append('closein')
+                Class.append('Focus')
+                writerow.append('Focus')
             else:
                 Class.append('Undefined')
             writerow=tuple(writerow)
