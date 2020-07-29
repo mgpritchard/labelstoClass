@@ -11,7 +11,7 @@ Input: CSV file, where the last column is integer-enumerated class.
 
 Parameters: Needs the path for the enum-ed CSV and the target path for the new CSV as command line arguments.
 
-Manual labour: Needs the user to actually hardcode what string each integer corresponds to.
+Manual labour: Needs the user to actually hardcode what string each integer corresponds to. Sorry.
 
 Output: CSV file, where the las column is class labels as strings.
 
