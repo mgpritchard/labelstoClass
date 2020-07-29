@@ -1,4 +1,4 @@
-#labelstoClass
+# labelstoClass
 
 This is a (not-so) quick and dirty python script to convert enumerated integer class labels to string labels, for EMG/EEG dtasets in CSV format.
 
