@@ -20,7 +20,7 @@ def numtoClass(input_file, output_file):
         with open(input_file) as readheads:
             headers=csv.DictReader(readheads).fieldnames
         #headers = csv_data.dtype.names
-        Class=[]
+        #Class=[]
         index=0
         headers=headers[:-1]
         headers.append('Class')
@@ -29,16 +29,19 @@ def numtoClass(input_file, output_file):
             datarow=dataset[index]
             writerow=list(datarow)
             if x==0:
-                Class.append('Relax')
+                #Class.append('Relax')
+                """commenting out this unused approach.
+                will look again later as it might actually be better"""
                 writerow.append('Relax')
             elif x==1:
-                Class.append('Neutral')
+                #Class.append('Neutral')
                 writerow.append('Neutral')
             elif x==2:
-                Class.append('Focus')
+                #Class.append('Focus')
                 writerow.append('Focus')
             else:
-                Class.append('Undefined')
+                #Class.append('Undefined')
+                writerow.append('Undefined')
             writerow=tuple(writerow)
             emgwriter.writerow(writerow)
             index=index+1

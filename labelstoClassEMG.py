@@ -20,7 +20,7 @@ def numtoClass(input_file, output_file):
         with open(input_file) as readheads:
             headers=csv.DictReader(readheads).fieldnames
         #headers = csv_data.dtype.names
-        Class=[]
+        #Class=[]
         index=0
         headers=headers[:-1]
         headers.append('Class')
@@ -29,46 +29,49 @@ def numtoClass(input_file, output_file):
             datarow=dataset[index]
             writerow=list(datarow)
             if x==0:
-                Class.append('Open') #Splay
+                #Class.append('Open') # or sometimes Splay
+                """commenting out this unused approach.
+                will look again later as it might actually be better"""
                 writerow.append('Open')
             elif x==1:
-                Class.append('Neutral')
+                #Class.append('Neutral')
                 writerow.append('Neutral')
             elif x==2:
-                Class.append('Close') #Clench
+                #Class.append('Close') # or sometimes Clench
                 writerow.append('Close')
             elif x==3:
-                Class.append('Scissors') #Peace
+                #Class.append('Scissors') # or sometimes Peace
                 writerow.append('Scissors')
             elif x==4:
-                Class.append('ThumbsUp')
+                #Class.append('ThumbsUp')
                 writerow.append('ThumbsUp')
             elif x==5:
-                Class.append('Paper') #FlatOpen
+                #Class.append('Paper') # or sometimes FlatOpen
                 writerow.append('Paper')
             elif x==6:
-                Class.append('IdxPoint')
+                #Class.append('IdxPoint')
                 writerow.append('IdxPoint')
             elif x==7:
-                Class.append('FlatClose')
+                #Class.append('FlatClose')
                 writerow.append('FlatClose')
             elif x==8:
-                Class.append('FingerGun')
+                #Class.append('FingerGun')
                 writerow.append('FingerGun')
             elif x==9:
-                Class.append('waveout') #openout
+                #Class.append('waveout') # or sometimes openout
                 writerow.append('waveout')
             elif x==10:
-                Class.append('wavein') #openin
+                #Class.append('wavein') # or sometimes openin
                 writerow.append('wavein')
             elif x==11:
-                Class.append('closeout')
+                #Class.append('closeout')
                 writerow.append('closeout')
             elif x==12:
-                Class.append('closein')
+                #Class.append('closein')
                 writerow.append('closein')
             else:
-                Class.append('Undefined')
+                #Class.append('Undefined')
+                writerow.append('Undefined')
             writerow=tuple(writerow)
             emgwriter.writerow(writerow)
             index=index+1
